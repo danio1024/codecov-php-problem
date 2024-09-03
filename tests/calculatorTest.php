@@ -2,6 +2,7 @@
 require 'vendor/autoload.php';
 
 use Calculator\BasicCalculator;
+use Calculator\SomeAttribute;
 
 class calculatorTest extends PHPUnit\Framework\TestCase
 {
@@ -52,5 +53,14 @@ class calculatorTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(0.0, BasicCalculator::divide(0, 2.0));
         $this->assertEquals(-2.0, BasicCalculator::divide(-4, 2.0));
         // $this->assertEquals('Cannot divide by 0', BasicCalculator::divide(2.0, 0));
+    }
+
+    public function testReflection()
+    {
+        $calc = new BasicCalculator();
+
+        $reflection = new ReflectionClass($calc);
+
+        $this->assertCount(1, $reflection->getAttributes(SomeAttribute::class));
     }
 }
