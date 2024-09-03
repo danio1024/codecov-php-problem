@@ -15,6 +15,7 @@ class SomeAttribute
         private string $parameter,
         private ?SomeNestedAttribute $anotherParam,
         private string $yetAnotherParam,
+        private array $arrayParam,
     ) {
         if ($this->anotherParam === $this->yetAnotherParam) {
             throw new \InvalidArgumentException('Another param and yet another param cannot be the same');

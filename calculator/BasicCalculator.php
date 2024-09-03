@@ -5,6 +5,12 @@ namespace Calculator;
     parameter: SomeEnum::VALUE->value,
     anotherParam: new SomeNestedAttribute('nested value'),
     yetAnotherParam: BasicCalculator::class,
+    arrayParam: [
+        SomeEnum::VALUE->value,
+        SomeEnum::VALUE->value,
+        BasicCalculator::class,
+        new SomeNestedAttribute('nested value'),
+    ],
 )]
 class BasicCalculator
 {
