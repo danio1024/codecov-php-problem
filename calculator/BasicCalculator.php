@@ -15,7 +15,7 @@ namespace Calculator;
 class BasicCalculator
 {
     public static function add(float $x, float $y) {
-        return $x + $y;
+        return $y + $x;
     }
 
     public static function subtract(float $x, float $y) {
