@@ -3,8 +3,8 @@ namespace Calculator;
 
 #[SomeAttribute(
     parameter: 'value',
-    anotherParam: 'another value',
-    yetAnotherParam: 'yet another value',
+    anotherParam: new SomeNestedAttribute('nested value'),
+    yetAnotherParam: BasicCalculator::class,
 )]
 class BasicCalculator
 {

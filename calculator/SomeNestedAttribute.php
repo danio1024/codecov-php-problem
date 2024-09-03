@@ -7,12 +7,10 @@ namespace Calculator;
 use Attribute;
 
 #[Attribute]
-class SomeAttribute
+class SomeNestedAttribute
 {
     public function __construct(
         private string $parameter,
-        private ?SomeNestedAttribute $anotherParam,
-        private string $yetAnotherParam,
     ){
     }
 }
