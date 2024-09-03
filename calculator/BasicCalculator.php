@@ -4,6 +4,7 @@ namespace Calculator;
 #[SomeAttribute(
     parameter: 'value',
     anotherParam: 'another value',
+    yetAnotherParam: 'yet another value',
 )]
 class BasicCalculator
 {

@@ -12,6 +12,7 @@ class SomeAttribute
     public function __construct(
         private string $parameter,
         private string $anotherParam,
+        private string $yetAnotherParam,
     ){
     }
 }
