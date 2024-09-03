@@ -6,10 +6,7 @@ namespace Calculator;
     anotherParam: new SomeNestedAttribute('nested value'),
     yetAnotherParam: BasicCalculator::class,
     arrayParam: [
-        SomeEnum::VALUE->value,
-        SomeEnum::VALUE->value,
-        BasicCalculator::class,
-        new SomeNestedAttribute('nested value'),
+        SomeEnum::VALUE->value => BasicCalculator::class,
     ],
 )]
 class BasicCalculator
