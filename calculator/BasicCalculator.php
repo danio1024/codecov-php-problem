@@ -1,6 +1,10 @@
 <?php
 namespace Calculator;
 
+#[SomeAttribute(
+    parameter: 'value',
+    anotherParam: 'another value',
+)]
 class BasicCalculator
 {
     public static function add(float $x, float $y) {
