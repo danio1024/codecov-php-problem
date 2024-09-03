@@ -10,7 +10,7 @@ use Attribute;
 class SomeNestedAttribute
 {
     public function __construct(
-        private string $parameter,
+        private array $parameter,
     ){
     }
 }

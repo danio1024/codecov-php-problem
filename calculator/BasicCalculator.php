@@ -3,7 +3,13 @@ namespace Calculator;
 
 #[SomeAttribute(
     parameter: SomeEnum::VALUE->value,
-    anotherParam: new SomeNestedAttribute('nested value'),
+    anotherParam: new SomeNestedAttribute(
+        parameter: [
+            new SomeNestedAttribute([
+                SomeEnum::VALUE->value => BasicCalculator::class,
+            ])
+        ]
+    ),
     yetAnotherParam: BasicCalculator::class,
     arrayParam: [
         SomeEnum::VALUE->value => BasicCalculator::class,
@@ -12,7 +18,7 @@ namespace Calculator;
 class BasicCalculator
 {
     public static function add(float $x, float $y) {
-        return $y + $x;
+        return $x + $y;
     }
 
     public static function subtract(float $x, float $y) {
