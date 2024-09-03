@@ -2,7 +2,7 @@
 namespace Calculator;
 
 #[SomeAttribute(
-    parameter: 'value',
+    parameter: SomeEnum::VALUE->value,
     anotherParam: new SomeNestedAttribute('nested value'),
     yetAnotherParam: BasicCalculator::class,
 )]
