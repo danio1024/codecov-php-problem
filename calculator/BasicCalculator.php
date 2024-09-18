@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Calculator;
 
 use ApiPlatform\Metadata\ApiResource;
@@ -13,22 +16,6 @@ use ApiPlatform\Metadata\GetCollection;
     ],
     normalizationContext: [
         'skip_null_values' => false,
-    ],
-)]
-#[SomeAttribute(
-    parameter: BasicCalculator::class,
-    anotherParam: new SomeNestedAttribute(
-        parameter: [
-            new SomeNestedAttribute([
-                SomeEnum::VALUE->value => BasicCalculator::class,
-                SomeEnum::VALUE->value => BasicCalculator::class,
-            ])
-        ]
-    ),
-    yetAnotherParam: SomeEnum::VALUE->value,
-    arrayParam: [
-        SomeEnum::VALUE->value => BasicCalculator::class,
-        SomeEnum::VALUE->value => BasicCalculator::class,
     ],
 )]
 class BasicCalculator
