@@ -7,12 +7,22 @@ namespace Calculator;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Put;
 
 #[ApiResource(
     shortName: 'BasicCalculator',
     operations: [
         new Get('/calculator', provider: BasicCalculator::class),
         new GetCollection('/calculator', provider: BasicCalculator::class),
+        new Put(
+            filters: [
+                SomeEnum::class,
+                SomeAttribute::class,
+            ],
+            provider: BasicCalculator::class,
+            processor: BasicCalculator::class,
+            allowCreate: true,
+        ),
     ],
     normalizationContext: [
         'skip_null_values' => false,
