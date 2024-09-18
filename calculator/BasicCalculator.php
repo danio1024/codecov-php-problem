@@ -1,6 +1,20 @@
 <?php
 namespace Calculator;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+
+#[ApiResource(
+    shortName: 'BasicCalculator',
+    operations: [
+        new Get('/calculator', provider: BasicCalculator::class),
+        new GetCollection('/calculator', provider: BasicCalculator::class),
+    ],
+    normalizationContext: [
+        'skip_null_values' => false,
+    ],
+)]
 #[SomeAttribute(
     parameter: BasicCalculator::class,
     anotherParam: new SomeNestedAttribute(
