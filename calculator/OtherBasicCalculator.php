@@ -9,7 +9,7 @@ namespace Calculator;
 #[SomeAttribute('some value', null, 'another value', ['array value'])]
 #[SomeAttribute('some value', null, 'another value', ['array value'])]
 #[SomeAttribute('some value', null, 'another value', ['array value'])]
-class BasicCalculator
+class OtherBasicCalculator
 {
     public static function add(float $x, float $y) {
         return $y + $x;

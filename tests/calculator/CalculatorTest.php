@@ -1,14 +1,15 @@
 <?php
-require 'vendor/autoload.php';
+
+namespace Calculator\Tests;
 
 use Calculator\BasicCalculator;
-use Calculator\SomeAttribute;
+use PHPUnit;
 
-class calculatorTest extends PHPUnit\Framework\TestCase
+class CalculatorTest extends PHPUnit\Framework\TestCase
 {
     /**
-     * @covers Calculator\BasicCalculator
-    */
+     * @covers BasicCalculator
+     */
     public function testAdd()
     {
         $this->assertEquals(3.0, BasicCalculator::add(1, 2));
@@ -20,7 +21,7 @@ class calculatorTest extends PHPUnit\Framework\TestCase
 
     /**
      * @covers Calculator\BasicCalculator
-    */
+     */
     public function testSubtract()
     {
         $this->assertEquals(-1.0, BasicCalculator::subtract(1, 2));
@@ -32,8 +33,8 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Calculator\BasicCalculator
-    */
+     * @covers BasicCalculator
+     */
     public function testMultiply()
     {
         $this->assertEquals(2.0, BasicCalculator::multiply(1, 2));
@@ -44,8 +45,8 @@ class calculatorTest extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers Calculator\BasicCalculator
-    */
+     * @covers BasicCalculator
+     */
     public function testDivide()
     {
         $this->assertEquals(0.5, BasicCalculator::divide(1, 2));
