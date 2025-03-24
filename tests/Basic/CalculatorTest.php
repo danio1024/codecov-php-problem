@@ -1,6 +1,6 @@
 <?php
 
-namespace Calculator\Tests;
+namespace Calculator\Tests\Basic;
 
 use Calculator\BasicCalculator;
 use PHPUnit;

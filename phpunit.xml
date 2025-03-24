@@ -13,8 +13,11 @@
          forceCoversAnnotation="true"
          verbose="true">
     <testsuites>
-        <testsuite name="default">
-            <directory>tests</directory>
+        <testsuite name="basic">
+            <directory>tests/Basic</directory>
+        </testsuite>
+        <testsuite name="other">
+            <directory>tests/Other</directory>
         </testsuite>
     </testsuites>
 
